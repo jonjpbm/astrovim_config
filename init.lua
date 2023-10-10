@@ -70,16 +70,18 @@ return {
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
     -- Set up custom filetypes
-    -- vim.filetype.add {
-    --   extension = {
-    --     foo = "fooscript",
-    --   },
+     vim.filetype.add {
+       extension = {
+         envsubst = "yaml",
+         tfvars   = "terraform",
+         hcl      = "terraform",
+       },
     --   filename = {
     --     ["Foofile"] = "fooscript",
     --   },
     --   pattern = {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
-    -- }
+     }
   end,
 }
