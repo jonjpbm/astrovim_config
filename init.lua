@@ -74,7 +74,6 @@ return {
        extension = {
          envsubst = "yaml",
          tfvars   = "terraform",
-         hcl      = "terraform",
        },
     --   filename = {
     --     ["Foofile"] = "fooscript",
@@ -83,5 +82,13 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
      }
+
+  return {
+    plugins = {
+      "AstroNvim/astrocommunity",
+      { import = "astrocommunity.pack.terraform" },
+      -- ... import any community contributed plugins here
+    }
+  }
   end,
 }
